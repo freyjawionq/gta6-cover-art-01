@@ -1,0 +1,30 @@
+html, body { margin: 0; min-height: 100%; background: #140a24; color: #f5eefc; font: 15px/1.45 system-ui, sans-serif; }
+.app { display: flex; gap: 28px; align-items: flex-start; justify-content: center; padding: 24px; box-sizing: border-box; flex-wrap: wrap; }
+.controls { display: flex; flex-direction: column; gap: 13px; width: 320px; max-width: 100%; }
+.controls h1 { margin: 0; font-size: 30px; letter-spacing: 0.5px; color: #feb47b; }
+.sub { margin: 0; color: #c9b8e0; }
+label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; }
+label span { font-weight: 400; }
+input[type=text], select { font: inherit; padding: 9px; border: 1px solid #5b4a78; border-radius: 8px; background: #241638; color: #f5eefc; }
+input[type=file] { font: inherit; }
+input[type=range] { width: 100%; accent-color: #ff2e88; }
+button { font: inherit; font-weight: 700; padding: 10px 12px; border: 0; border-radius: 8px; background: #ff2e88; color: #fff; cursor: pointer; }
+button:hover { background: #ff4d9d; }
+button.active { background: #feb47b; color: #1d0f2e; }
+.row { display: flex; gap: 8px; }
+.row button { flex: 1; }
+#sample, #fill-all { background: #3a2a5e; }
+#sample:hover, #fill-all:hover { background: #4c3a78; }
+fieldset { border: 1px solid #5b4a78; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 10px; margin: 0; }
+legend { font-weight: 700; color: #feb47b; padding: 0 6px; }
+.hint { margin: 0; color: #a894c4; font-size: 13px; font-weight: 400; }
+.thumbs { display: flex; flex-direction: column; gap: 6px; }
+.thumb { background: #241638; color: #f5eefc; text-align: left; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.exports { display: flex; flex-direction: column; gap: 8px; }
+#status { margin: 0; color: #8ef0d2; min-height: 1.4em; }
+.preview { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.preview canvas { width: min(72vh, 62vw, 640px); height: auto; aspect-ratio: auto; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55); cursor: grab; background: #12081f; }
+.preview canvas:active { cursor: grabbing; }
+body.shot-cover .controls, body.shot-cover .preview .hint { display: none; }
+body.shot-cover .app { padding: 0; }
+body.shot-cover .preview canvas { width: 100vw; max-width: none; height: 100vh; box-shadow: none; }
